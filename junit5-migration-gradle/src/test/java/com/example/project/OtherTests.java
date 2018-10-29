@@ -12,14 +12,19 @@ package com.example.project;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
+//@EnabledIfSystemProperty(named = "blackDotEnabled", matches = "true")
 class OtherTests {
 
 	@Test
 	void testThisThing() {
+		fail();
 	}
 
 	@Test
 	void testThisOtherThing() {
+		fail();
 	}
 
 }

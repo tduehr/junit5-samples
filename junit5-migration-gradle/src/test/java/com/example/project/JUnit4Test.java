@@ -10,14 +10,15 @@
 
 package com.example.project;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class JUnit4Test {
 
 	@Test
 	public void test() {
+		fail();
 		assertEquals(3, 1 + 2);
 	}
 }

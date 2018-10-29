@@ -50,6 +50,7 @@ test {
 		// includeEngines 'junit-jupiter', 'junit-vintage'
 		// excludeEngines 'custom-engine'
 
+//		include "**/*.java"
 		// includeTags 'fast'
 		excludeTags 'slow'
 	}
@@ -63,6 +64,21 @@ test {
     }
 }
 
+task testSlow(type: Test) {
+	useJUnitPlatform {
+		includeTags "slow"
+	}
+}
+
+tasks.withType(Test) {
+	scanForTestClasses = false
+	failFast = true
+	jvmArgs "-Xmx1024m"
+	useJUnitPlatform {
+		includeEngines 'junit-jupiter', 'junit-vintage'
+	}
+}
+
 wrapper {
-	gradleVersion = '4.8'
+	gradleVersion = '4.10'
 }

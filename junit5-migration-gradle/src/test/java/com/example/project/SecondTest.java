@@ -10,11 +10,11 @@
 
 package com.example.project;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class SecondTest {
 
@@ -30,3 +30,6 @@ class SecondTest {
 		Thread.sleep(1000);
 	}
 }
+
+
+
